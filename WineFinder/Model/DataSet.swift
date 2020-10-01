@@ -254,27 +254,20 @@ var roseWineArray = [
     
 ]
     
-    
     func getWineSets(forCategoryName name: String) -> [Wine] {
-      switch name {
-      case "Red Wine":
-        return redWineArray
-        
-        
-      case "White Wine":
-      return whiteWineArray
-        
-      case "Rose Wine":
-        return roseWineArray
-      
-      
-      default:
-        return whiteWineArray
-      }
+        switch name {
+        case "Red Wine":
+            return redWineArray
+            
+        case "White Wine":
+            return whiteWineArray
+            
+        case "Rose Wine":
+            return roseWineArray
+            
+        default:
+            return whiteWineArray
+        }
     }
-    
-    
-    
-    
 }
 

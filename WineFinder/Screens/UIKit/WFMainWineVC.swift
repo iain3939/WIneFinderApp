@@ -120,11 +120,11 @@ extension WFMainWineVC: UISearchResultsUpdating, UISearchBarDelegate {
     
     
     func configureSearchController() {
-        searchController.searchResultsUpdater                 = self
-        searchController.searchBar.placeholder                = "Search for a wine"
-        searchController.obscuresBackgroundDuringPresentation = false
-        navigationItem.searchController                       = searchController
-        definesPresentationContext                            = true
+        searchController.searchResultsUpdater                   = self
+        searchController.searchBar.placeholder                  = "Search for a wine"
+        searchController.obscuresBackgroundDuringPresentation   = false
+        navigationItem.searchController                         = searchController
+        definesPresentationContext                              = true
     }
 }
 
