@@ -16,24 +16,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vYa-VW-00X">
-                                <rect key="frame" x="0.0" y="166" width="414" height="119"/>
+                                <rect key="frame" x="0.0" y="166" width="414" height="59"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sainsbury's" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SqV-6Q-pks">
-                                        <rect key="frame" x="76" y="0.0" width="262" height="68.5"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="50"/>
-                                        <color key="textColor" red="0.94144541029999995" green="0.42361551520000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wine Finder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWc-tp-s1M">
-                                        <rect key="frame" x="119.5" y="76.5" width="175.5" height="42.5"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="31"/>
+                                        <rect key="frame" x="85.5" y="0.0" width="243.5" height="59"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="43"/>
                                         <color key="textColor" red="0.94144541029999995" green="0.42361551520000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Winelaunch" translatesAutoresizingMaskIntoConstraints="NO" id="bbq-MY-zrI">
-                                <rect key="frame" x="20" y="345" width="374" height="423"/>
+                                <rect key="frame" x="20" y="285" width="374" height="423"/>
                                 <color key="tintColor" red="0.94144541029999995" green="0.42361551520000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="423" id="X55-f7-nh7"/>
