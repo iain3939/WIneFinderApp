@@ -26,10 +26,10 @@ struct Wine: Hashable {
     
     
     func hash(into hasher: inout Hasher) {
-      // 2
+      
       hasher.combine(id)
     }
-    // 3
+   
     static func == (lhs: Wine, rhs: Wine) -> Bool {
       lhs.id == rhs.id
     }
