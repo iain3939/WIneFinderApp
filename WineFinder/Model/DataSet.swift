@@ -11,8 +11,8 @@ class DataSet {
     
     enum WineCategory: String {
         case whiteWine  = "White Wine"
-        case redWine = "Red Wine"
-        case roseWine = "Rose Wine"
+        case redWine    = "Red Wine"
+        case roseWine   = "Rose Wine"
     }
     
 
@@ -33,7 +33,7 @@ class DataSet {
              alcoholConetent: "9.8 units",
              grapeVariety: "Merlot",
              wineColor:"Red",
-             typeOfClosure: "Screwcap", Tastecategory: "B"),
+             typeOfClosure: "Screwcap", Tastecategory: "B", isRanged: true),
         
         Wine(wineName: "Bouchard Aine Et Fils Pinot Noir 75cl",
              wineDescription: "Pinot Noir - Red French Wine Wine of France Full of history and with fine flavours, this wine pays tribute to the General Counsellor, a major figure of the family, who devoted his life to the renown of the noble grapes of his home region. In his honour, the house is perpetuating the tradition of quality, elegance and prestige in selecting and making fine wines which marvellously express all the richness of the French terroirs.",
@@ -44,7 +44,7 @@ class DataSet {
              alcoholConetent: "9.4 units",
              grapeVariety: "Pinot Noir",
              wineColor:"Red",
-             typeOfClosure: "Screwcap", Tastecategory: "B"),
+             typeOfClosure: "Screwcap", Tastecategory: "B", isRanged: true),
 
         Wine(wineName: "Sainsbury's Cabernet Sauvignon, SO Organic 75cl",
              wineDescription: "Organic Fairtrade Cabernet Sauvignon Wine of Origin Western Cape Organic WineOur organic wines are made from grapes grown without the use of chemical pesticides and fertilisers, so allowing the natural biodiversity of the vineyards to thrive.This wine is the results of careful winemaking in combination with vineyard management allowing for the wine to be made without the addition of sulphites. It is brimming with cassis and black cherry flavours with hints of coffee and chocolate. Perfect with roast lamb.Region: Western Cape, South AfricaGrape: Cabernet Sauvignon Style: Smooth & Mellow ",
@@ -55,7 +55,7 @@ class DataSet {
              alcoholConetent: "9.6 units",
              grapeVariety: "",
              wineColor:"Red",
-             typeOfClosure: "Screwcap", Tastecategory: "B"),
+             typeOfClosure: "Screwcap", Tastecategory: "B", isRanged: true),
 
         Wine(wineName: "Campo Viejo Rioja Tempranillo 75cl", wineDescription: "Tempranillo - Red Spanish Wine Wine of Spain Award-winning Rioja, perfect for dinner parties as well as for everyday This rich and fruity wine from Rioja is perfect with pasta, poultry and fresh light cheeses, grilled chicken, small bites (light cheese, grilled vegetables). The 2013 vintage won a Bronze Medal at the International Wine & Spirit Competition 2015 and at the Decanter World Wine Awards in 2015.",
              wineCountry: "Spain",
@@ -65,7 +65,7 @@ class DataSet {
              alcoholConetent: "10.1 units",
              grapeVariety: "Tempranillo",
              wineColor:"Red",
-             typeOfClosure: "Natural Cork", Tastecategory: "B"),
+             typeOfClosure: "Natural Cork", Tastecategory: "B", isRanged: false),
 
         Wine(wineName: "Casillero Del Diablo Cabernet Sauvignon 75cl",
              wineDescription: "A smooth, full-bodied Cabernet Sauvignon with cassis and black cherry flavours, complemented by hints of coffee and dark chocolate. More than 100 years ago, Don Melchor de Concha y Toro reserved for himself an exclusive batch of his best wines. To keep strangers away from his private reserve, he spread the rumor that the Devil lived in that place. Hence the name: Casillero Del Diablo, The Devil's Cellar.",
@@ -76,20 +76,20 @@ class DataSet {
              alcoholConetent: "10.1 units",
              grapeVariety: "Cabernet Sauvignon",
              wineColor:"Red",
-             typeOfClosure: "Screwcap", Tastecategory: "B"),
+             typeOfClosure: "Screwcap", Tastecategory: "B", isRanged: true),
 
         Wine(wineName: "Sainsbury's Merlot, SO Organic 75cl",
              wineDescription: "Our organic wines are made from grapes grown without the use of chemical pesticides or fertilisers, so allowing the natural biodiversity of the vineyards to thrive.This smooth, rich red is made from organic grapes grown in the beautiful Western Cape of South Africa. Aromas or prune, chocolate and spice lead to flavours of cherry, raspberry and blackcurrant. Perfect with heart stews or steak.",
              wineCountry: "South Africa",
              wineFood: "",
-             wineImg: "MerlotSOOrganic", wineAlcohol: "13 %", alcoholConetent: "9.4 units", grapeVariety: "Merlot", wineColor:"Red",typeOfClosure: "Screwcap", Tastecategory: "B"),
+             wineImg: "MerlotSOOrganic", wineAlcohol: "13 %", alcoholConetent: "9.4 units", grapeVariety: "Merlot", wineColor:"Red",typeOfClosure: "Screwcap", Tastecategory: "B", isRanged: false),
 
         Wine(wineName: "Wolf Blass Red Label Shiraz Cabernet 75cl",
              wineDescription: "Smooth red wine from premium South Eastern Australian vineyards Shiraz and Cabernet Sauvignon combine to create a wine with a bouquet of fresh red fruits, spice, mint and balanced oak. Soft, fruity and full of flavour, this wine is best enjoyed young and fresh with rich, hearty dishes.",
              wineCountry: "Australia",
              wineFood: "",
              wineImg: "WolfBlassRedLabelShirazCaberne", wineAlcohol: "13.5%", alcoholConetent: "10.1 units", grapeVariety: "Shiraz/Syrah, Cabernet Sauvignon", wineColor:"Red",
-             typeOfClosure: "Screwcap", Tastecategory: "B"),
+             typeOfClosure: "Screwcap", Tastecategory: "B", isRanged: true),
 
     ]
 
@@ -103,7 +103,7 @@ var whiteWineArray = [
          alcoholConetent: "9.4 units",
          grapeVariety: "Sauvignon Blanc",
          wineColor:"White",
-         typeOfClosure: "Screwcap", Tastecategory: "2"),
+         typeOfClosure: "Screwcap", Tastecategory: "2", isRanged: false),
     
     Wine(wineName: "Villa Maria Private Bin Sauvignon Blanc 75cl",
          wineDescription: "This wine is approachable and food friendly with a beautiful expression of crisp lime and ripe passionfruit. Enjoy with seafood and white meats.",
@@ -114,7 +114,7 @@ var whiteWineArray = [
          alcoholConetent: "9.8 units",
          grapeVariety: "Sauvignon Blanc",
          wineColor:"White",
-         typeOfClosure: "Screwcap", Tastecategory: "2"),
+         typeOfClosure: "Screwcap", Tastecategory: "2", isRanged: true),
     
     Wine(wineName: "Sainsbury's Pinot Grigio, Taste the Difference 75cl",
          wineDescription: "Elegant and dry, this Pinot Grigio is characterised by flavours of peaches, greengages and almonds. This wine is produced at Cantina Viticoltori in Trentino, located in the picturesque Dolomite Alps in the north east of Italy. This region has long, warm summer days and cool nights which are ideal conditions for the production of light, aromatic dry white wines. ",
@@ -125,7 +125,7 @@ var whiteWineArray = [
          alcoholConetent: "9.4 units",
          grapeVariety: "Pinot Grigio",
          wineColor:"White",
-         typeOfClosure: "Screwcap", Tastecategory: "2"),
+         typeOfClosure: "Screwcap", Tastecategory: "2", isRanged: true),
     
     Wine(wineName: "Sainsbury's Coolwater Bay Marlborough Sauvignon, Taste the Difference 75cl", wineDescription: "An elegant wine with delicate aromas of fresh herbs, citrus and stone fruits and flavours of zesty lemon and lime combined with a distinctive mineral note and a fresh finish. ",
          wineCountry: "New Zealand ",
@@ -135,7 +135,7 @@ var whiteWineArray = [
          alcoholConetent: "9.4 units",
          grapeVariety: "Sauvignon Blanc",
          wineColor:"White",
-         typeOfClosure: "Screwcap", Tastecategory: "2"),
+         typeOfClosure: "Screwcap", Tastecategory: "2", isRanged: true),
     
     Wine(wineName: "Porcupine Ridge Sauvignon Blanc 75cl",
          wineDescription: "Gooseberry and tropical fruit flavours, fresh and dry with lengthy citrus finish",
@@ -146,7 +146,7 @@ var whiteWineArray = [
          alcoholConetent: "9.38 units",
          grapeVariety: "Sauvignon Blanc",
          wineColor:"White",
-         typeOfClosure: "Screwcap", Tastecategory: "2"),
+         typeOfClosure: "Screwcap", Tastecategory: "2", isRanged: false),
     
     Wine(wineName: "Wolf Blass Red Label Chardonnay Semillon 75cl",
          wineDescription: "Chardonnay and Semillon combine to create a wine with fresh citrus and peach characters, a seamless palate and a crisp finish. Best enjoyed young and fresh with chicken, seafood, French and Asian cuisines.", wineCountry: "South Eastern Australia",
@@ -156,7 +156,7 @@ var whiteWineArray = [
          alcoholConetent: "",
          grapeVariety: "",
          wineColor:"",
-         typeOfClosure: "", Tastecategory: "2"),
+         typeOfClosure: "", Tastecategory: "2", isRanged: true),
     
     Wine(wineName: "Rocca Murer Pinot Grigio Trentino 75cl",
          wineDescription: "From Trentino foothills vineyards, this delicious Pinot Grigio stands out for its elegance and fruity notes of white peach and yellow apple. Good structure and sapidity; it is ideal as an aperitif and matches perfectly with seafood and pasta dishes.",
@@ -167,7 +167,7 @@ var whiteWineArray = [
          alcoholConetent: "9.4 units",
          grapeVariety: "Chardonnay, Semillon",
          wineColor:"White",
-         typeOfClosure: "Screwcap", Tastecategory: "2")
+         typeOfClosure: "Screwcap", Tastecategory: "2", isRanged: true)
     
     
 ]
@@ -184,7 +184,7 @@ var roseWineArray = [
          alcoholConetent: "9.8 units",
          grapeVariety: "Côtes de Provence",
          wineColor:"Rosé",
-         typeOfClosure: "Natural cork", Tastecategory: "2"),
+         typeOfClosure: "Natural cork", Tastecategory: "2", isRanged: false),
     
     Wine(wineName: "Barefoot White Zinfandel 75cl",
          wineDescription: "Barefoot White Zinfandel is packed with seriously lush pineapple and strawberry and tastes deliciously fruity. Great served chilled with appetisers, summer fruits, chicken, seafood and cheeses.",
@@ -195,7 +195,7 @@ var roseWineArray = [
          alcoholConetent: "6.0 units",
          grapeVariety: "White Zinfandel",
          wineColor:"Rosé",
-         typeOfClosure: "Screwcap", Tastecategory: "2"),
+         typeOfClosure: "Screwcap", Tastecategory: "2", isRanged: true),
     
     Wine(wineName: "Palastri Pinot Grigio Blush 75cl",
          wineDescription: "The colour of this delicate blush wine comes from the skins of the pink-tinged Pinot Grigio grapes. This is a fresh and crisp wine with a zesty aroma and a fruity flavour with notes of ripe pear and peach. It makes a great aperitif or serve with pizza, pasta or spicy dishes.",
@@ -206,7 +206,7 @@ var roseWineArray = [
          alcoholConetent: "9 units",
          grapeVariety: "Pinot Grigio Blush",
          wineColor:"Rosé",
-         typeOfClosure: "Screwcap", Tastecategory: "2"),
+         typeOfClosure: "Screwcap", Tastecategory: "2", isRanged: true),
     
     Wine(wineName: "Mateus Rosé 75cl",
          wineDescription: "Youthful and fresh wine with a touch of sparkle and lovely hints of red fruit",
@@ -217,7 +217,7 @@ var roseWineArray = [
          alcoholConetent: "8.25 units",
          grapeVariety: "Baga",
          wineColor:"Rosé",
-         typeOfClosure: "Screwcap", Tastecategory: "2"),
+         typeOfClosure: "Screwcap", Tastecategory: "2", isRanged: false),
     
     Wine(wineName: "Sancerre Rosé Les Caillotes 75cl",
          wineDescription: "Sancerre Rosé is a rare style of Sancerre. Made purely from classified Pinot Noir vineyards in the upper reaches of the Loire valley in northern France, 'Les Caillottes' takes its name from a terroir rich in small limestones (known locally as 'caillottes'). Pale petal pink; pretty aromas of ripe fruit intertwined with soft floral tones, the palate is delicately fruity, streaked with a refreshing zest from start to finish.",
@@ -228,7 +228,7 @@ var roseWineArray = [
          alcoholConetent: "10.1 units",
          grapeVariety: "Pinot Noir",
          wineColor:"Rosé",
-         typeOfClosure: "Natural Cork", Tastecategory: "2"),
+         typeOfClosure: "Natural Cork", Tastecategory: "2", isRanged: true),
     
     Wine(wineName: "Baron Gassier Provence St V Rose 75cl",
          wineDescription: "Located East from Aix-en-Provence, the vines are nestled at the foothills of the Sainte-Victoire mountain. They give birth to this fine and graceful rosé. Main grape varieties: Syrah and Grenache.",
@@ -239,7 +239,7 @@ var roseWineArray = [
          alcoholConetent: "9.8 units",
          grapeVariety: "Syrah",
          wineColor:"Rosé",
-         typeOfClosure: "Synthetic Cork", Tastecategory: "2"),
+         typeOfClosure: "Synthetic Cork", Tastecategory: "2", isRanged: true),
     
     Wine(wineName: "Miraval Côtes De Provence Rosé 75cl",
          wineDescription: "Rosé French Wine",
@@ -250,7 +250,7 @@ var roseWineArray = [
          alcoholConetent: "9.75 units",
          grapeVariety: "Cinsault",
          wineColor:"Rosé",
-         typeOfClosure: "Natural Cork", Tastecategory: "2")
+         typeOfClosure: "Natural Cork", Tastecategory: "2", isRanged: false)
     
 ]
     

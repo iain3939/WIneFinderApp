@@ -22,6 +22,7 @@ struct Wine: Hashable {
     var wineColor: String
     var typeOfClosure: String
     var Tastecategory: String
+    var isRanged: Bool
     
     
     

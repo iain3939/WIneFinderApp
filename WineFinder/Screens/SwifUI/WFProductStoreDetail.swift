@@ -21,7 +21,7 @@ struct WFProductStoreDetail: View {
             Color(color)
                 .edgesIgnoringSafeArea(.bottom)
             VStack(spacing: 20) {
-                LocationInfo(wine: Wine(wineName: wine.wineName, wineDescription: wine.wineDescription, wineCountry: wine.wineCountry, wineFood: wine.wineFood, wineImg: wine.wineImg, wineAlcohol: wine.wineAlcohol, alcoholConetent: wine.alcoholConetent, grapeVariety: wine.grapeVariety, wineColor: wine.wineColor, typeOfClosure: wine.typeOfClosure, Tastecategory: "2"))
+                LocationInfo(wine: Wine(wineName: wine.wineName, wineDescription: wine.wineDescription, wineCountry: wine.wineCountry, wineFood: wine.wineFood, wineImg: wine.wineImg, wineAlcohol: wine.wineAlcohol, alcoholConetent: wine.alcoholConetent, grapeVariety: wine.grapeVariety, wineColor: wine.wineColor, typeOfClosure: wine.typeOfClosure, Tastecategory: "2", isRanged: wine.isRanged))
                 RSSFeed()
                 Spacer()
             }
@@ -36,7 +36,7 @@ struct SwiftUIView_Previews: PreviewProvider {
     
     static var previews: some View {
         
-        WFProductStoreDetail(wine: Wine(wineName: "Brancott Estate Sauvignon Blanc 75cl", wineDescription: "Award Winning Premium white wine from Marlborough, New Zealand has sweet ripe fruit characters with a delightful mix of citrus, floral, pear and tropical fruit and a crisp nettle highlight, making it perfect for dinner parties and BBQ's. Our story began over 40 years ago with a bold idea to plant vines in Marlborough, New Zealand..", wineCountry: "New Zealand", wineFood: "", wineImg:"BrancottEstateSauvignonBlanc", wineAlcohol: "12.5%", alcoholConetent: "", grapeVariety: "Syrah, Grenache, Cinsault", wineColor:"White",typeOfClosure: "", Tastecategory: "2"))
+        WFProductStoreDetail(wine: Wine(wineName: "Brancott Estate Sauvignon Blanc 75cl", wineDescription: "Award Winning Premium white wine from Marlborough, New Zealand has sweet ripe fruit characters with a delightful mix of citrus, floral, pear and tropical fruit and a crisp nettle highlight, making it perfect for dinner parties and BBQ's. Our story began over 40 years ago with a bold idea to plant vines in Marlborough, New Zealand..", wineCountry: "New Zealand", wineFood: "", wineImg:"BrancottEstateSauvignonBlanc", wineAlcohol: "12.5%", alcoholConetent: "", grapeVariety: "Syrah, Grenache, Cinsault", wineColor:"White",typeOfClosure: "", Tastecategory: "2", isRanged: true))
     }
 }
 
@@ -173,7 +173,8 @@ struct LocationInfo: View {
                 }
                 HStack {
                     Text("Status:")
-                    Text("FS")
+                    wine.isRanged ? Text("FS") : Text("NR")
+                    
                 }
             }
             .font(Font.system(size: 15, weight: .semibold))

@@ -38,25 +38,25 @@ struct WFStockCard: View {
                 
                 VStack(spacing: 5) {
                     Text("Mon")
-                    Image(systemName: "2.square.fill")
+                    Image(systemName: wine.isRanged ? "2.square.fill" : "0.square")
                         .resizable()
-                        .foregroundColor(Color.orange)
+                        .foregroundColor(wine.isRanged ? Color.orange : Color.gray)
                         .frame(width: 25, height: 25)
                 }
                 
                 VStack(spacing: 5) {
                     Text("Tue")
-                    Image(systemName: "4.square.fill")
+                    Image(systemName: wine.isRanged ? "4.square.fill" : "0.square")
                         .resizable()
-                        .foregroundColor(Color.orange)
+                        .foregroundColor(wine.isRanged ? Color.orange : Color.gray)
                         .frame(width: 25, height: 25)
                 }
                 
                 VStack(spacing: 5) {
                     Text("Wed")
-                    Image(systemName: "7.square.fill")
+                    Image(systemName: wine.isRanged ? "7.square.fill" : "0.square")
                         .resizable()
-                        .foregroundColor(Color.orange)
+                        .foregroundColor(wine.isRanged ? Color.orange : Color.gray)
                         .frame(width: 25, height: 25)
                 }
                 
@@ -70,17 +70,17 @@ struct WFStockCard: View {
                 
                 VStack(spacing: 5) {
                     Text("Fri")
-                    Image(systemName: "1.square.fill")
+                    Image(systemName: wine.isRanged ? "1.square.fill" : "0.square")
                         .resizable()
-                        .foregroundColor(Color.orange)
+                        .foregroundColor(wine.isRanged ? Color.orange : Color.gray)
                         .frame(width: 25, height: 25)
                 }
                 
                 VStack(spacing: 5) {
                     Text("Sat")
-                    Image(systemName: "12.square.fill")
+                    Image(systemName: wine.isRanged ? "12.square.fill" : "0.square")
                         .resizable()
-                        .foregroundColor(Color.orange)
+                        .foregroundColor(wine.isRanged ? Color.orange : Color.gray)
                         .frame(width: 25, height: 25)
                 }
                 Spacer()
@@ -89,7 +89,7 @@ struct WFStockCard: View {
             .foregroundColor(.gray)
             .padding(.bottom,10)
             NavigationLink(
-                destination: WFProductStoreDetail(wine: Wine(wineName: wine.wineName, wineDescription: wine.wineDescription, wineCountry: wine.wineCountry, wineFood: wine.wineFood, wineImg: wine.wineImg, wineAlcohol: wine.wineAlcohol, alcoholConetent: wine.alcoholConetent, grapeVariety: wine.grapeVariety, wineColor: wine.wineColor, typeOfClosure: wine.typeOfClosure, Tastecategory: "2"))) {
+                destination: WFProductStoreDetail(wine: Wine(wineName: wine.wineName, wineDescription: wine.wineDescription, wineCountry: wine.wineCountry, wineFood: wine.wineFood, wineImg: wine.wineImg, wineAlcohol: wine.wineAlcohol, alcoholConetent: wine.alcoholConetent, grapeVariety: wine.grapeVariety, wineColor: wine.wineColor, typeOfClosure: wine.typeOfClosure, Tastecategory: "2", isRanged: wine.isRanged))) {
                 Spacer()
                 Image(systemName: "info.circle")
                     
@@ -107,7 +107,7 @@ struct WFStockCard: View {
 
 struct WFStockCard_Previews: PreviewProvider {
     static var previews: some View {
-        WFStockCard(wine: Wine(wineName: "Brancott Estate Sauvignon Blanc 75cl", wineDescription: "Award Winning Premium white wine from Marlborough, New Zealand has sweet ripe fruit characters with a delightful mix of citrus, floral, pear and tropical fruit and a crisp nettle highlight, making it perfect for dinner parties and BBQ's. Our story began over 40 years ago with a bold idea to plant vines in Marlborough, New Zealand..", wineCountry: "New Zealand", wineFood: "", wineImg:"BrancottEstateSauvignonBlanc", wineAlcohol: "Alcohol by volume: 12.5%", alcoholConetent: "", grapeVariety: "", wineColor:"",typeOfClosure: "", Tastecategory: "2"))
+        WFStockCard(wine: Wine(wineName: "Brancott Estate Sauvignon Blanc 75cl", wineDescription: "Award Winning Premium white wine from Marlborough, New Zealand has sweet ripe fruit characters with a delightful mix of citrus, floral, pear and tropical fruit and a crisp nettle highlight, making it perfect for dinner parties and BBQ's. Our story began over 40 years ago with a bold idea to plant vines in Marlborough, New Zealand..", wineCountry: "New Zealand", wineFood: "", wineImg:"BrancottEstateSauvignonBlanc", wineAlcohol: "Alcohol by volume: 12.5%", alcoholConetent: "", grapeVariety: "", wineColor:"",typeOfClosure: "", Tastecategory: "2", isRanged: true))
     }
 }
 

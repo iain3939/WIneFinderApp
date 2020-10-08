@@ -9,6 +9,12 @@ import SwiftUI
 
 struct WFPriceCard: View {
     let color = #colorLiteral(red: 0.9338523746, green: 0.9283010364, blue: 0.9381195903, alpha: 1)
+    
+    let wine: Wine
+    
+    init(wine: Wine) {
+        self.wine = wine
+    }
     var body: some View {
         
         VStack(spacing: 5) {
@@ -27,12 +33,12 @@ struct WFPriceCard: View {
             Divider()
             HStack {
                 
-                Text("£6.80")
+                 Text("£6.80")
                     .font(.title2)
                     .fontWeight(.medium)
                     .foregroundColor(.gray)
                 Spacer()
-                Text("12 (36)")
+                wine.isRanged ? Text("12 (36)") : Text("0")
                     .font(.title2)
                     .fontWeight(.medium)
                     .foregroundColor(.gray)
@@ -49,6 +55,6 @@ struct WFPriceCard: View {
 
 struct WFPriceCard_Previews: PreviewProvider {
     static var previews: some View {
-        WFPriceCard()
+        WFPriceCard(wine: Wine(wineName: "Brancott Estate Sauvignon Blanc 75cl", wineDescription: "Award Winning Premium white wine from Marlborough, New Zealand has sweet ripe fruit characters with a delightful mix of citrus, floral, pear and tropical fruit and a crisp nettle highlight, making it perfect for dinner parties and BBQ's. Our story began over 40 years ago with a bold idea to plant vines in Marlborough, New Zealand..", wineCountry: "New Zealand", wineFood: "", wineImg:"BrancottEstateSauvignonBlanc", wineAlcohol: "Alcohol by volume: 12.5%", alcoholConetent: "", grapeVariety: "", wineColor:"",typeOfClosure: "", Tastecategory: "2", isRanged: true))
     }
 }

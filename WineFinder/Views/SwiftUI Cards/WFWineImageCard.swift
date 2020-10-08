@@ -68,7 +68,7 @@ struct WFWineImageCard: View {
                     Spacer()
                     
                 }
-                
+                if wine.isRanged == true {
                 Text("Ranged")
                     .font(Font.system(size: 15))
                     .fontWeight(.semibold)
@@ -82,6 +82,21 @@ struct WFWineImageCard: View {
                     .cornerRadius(14)
                     .padding(.trailing, 40)
                     .padding(.bottom,20)
+                } else {
+                    Text("Not-Ranged")
+                        .font(Font.system(size: 15))
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color.red)
+                        
+                        .frame(width: 120, height: 22)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 14)
+                                .stroke(Color.red, lineWidth: 3)
+                        )
+                        .cornerRadius(14)
+                        .padding(.trailing, 40)
+                        .padding(.bottom,20)
+                }
             }
         }
         .background(Color.white)
@@ -92,6 +107,6 @@ struct WFWineImageCard: View {
 
 struct WFWineImageCard_Previews: PreviewProvider {
     static var previews: some View {
-        WFWineImageCard(wine: Wine(wineName: "Brancott Estate Sauvignon Blanc 75cl", wineDescription: "Award Winning Premium white wine from Marlborough, New Zealand has sweet ripe fruit characters with a delightful mix of citrus, floral, pear and tropical fruit and a crisp nettle highlight, making it perfect for dinner parties and BBQ's. Our story began over 40 years ago with a bold idea to plant vines in Marlborough, New Zealand..", wineCountry: "New Zealand", wineFood: "", wineImg:"BrancottEstateSauvignonBlanc", wineAlcohol: "Alcohol by volume: 12.5%", alcoholConetent: "", grapeVariety: "", wineColor:"",typeOfClosure: "", Tastecategory: "2"))
+        WFWineImageCard(wine: Wine(wineName: "Brancott Estate Sauvignon Blanc 75cl", wineDescription: "Award Winning Premium white wine from Marlborough, New Zealand has sweet ripe fruit characters with a delightful mix of citrus, floral, pear and tropical fruit and a crisp nettle highlight, making it perfect for dinner parties and BBQ's. Our story began over 40 years ago with a bold idea to plant vines in Marlborough, New Zealand..", wineCountry: "New Zealand", wineFood: "", wineImg:"BrancottEstateSauvignonBlanc", wineAlcohol: "Alcohol by volume: 12.5%", alcoholConetent: "", grapeVariety: "", wineColor:"",typeOfClosure: "", Tastecategory: "2", isRanged: true))
     }
 }

@@ -41,6 +41,11 @@ class WFMainWineVC: UIViewController, UICollectionViewDelegate {
         configureSearchController()
         applySnapshot(animatingDifferences: false)
         configureCollectionView()
+        if let safeToLoadTitle = wineCategory {
+            title = safeToLoadTitle.name
+        } else {
+            title = "NILL"
+        }
     }
     
     
@@ -60,6 +65,7 @@ class WFMainWineVC: UIViewController, UICollectionViewDelegate {
         let groupSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1.0),
             heightDimension: .fractionalWidth(2/3))
+        
         
         let group      = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: fullPhotoItem, count: 2)
         let section    = NSCollectionLayoutSection(group: group)
