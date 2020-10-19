@@ -41,11 +41,8 @@ class WFMainWineVC: UIViewController, UICollectionViewDelegate {
         configureSearchController()
         applySnapshot(animatingDifferences: false)
         configureCollectionView()
-        if let safeToLoadTitle = wineCategory {
-            title = safeToLoadTitle.name
-        } else {
-            title = "NILL"
-        }
+        
+
     }
     
     
@@ -100,6 +97,7 @@ class WFMainWineVC: UIViewController, UICollectionViewDelegate {
             
             let host = UIHostingController(rootView: wineDetailView)
             navigationController?.pushViewController(host, animated: true)
+            print("item\(wine)")
         }
     }
     
@@ -108,7 +106,7 @@ class WFMainWineVC: UIViewController, UICollectionViewDelegate {
 extension WFMainWineVC: UISearchResultsUpdating, UISearchBarDelegate {
     
     func  filteredWines(for queryOrNil: String?) -> [Wine] {
-        let  wines = dataSet.getWineSets(forCategoryName: selectedWineCategory)
+        let  wines = dataSet.getWineSets(forCategoryName: DataSet.WineCategory(rawValue: selectedWineCategory)!)
         guard let querry = queryOrNil, !querry.isEmpty else { return wines }
         return wines.filter {
             

@@ -15,13 +15,13 @@ class WineCell: UICollectionViewCell {
     @IBOutlet weak var statusIndicator: UIView!
     
     override func awakeFromNib() {
-        bgView.layer.cornerRadius = 10
-        bgView.layer.shadowColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1).cgColor
-        bgView.layer.shadowOpacity =  0.20
-        bgView.layer.shadowOffset = CGSize(width: 0, height: 5)
-        bgView.layer.shadowRadius = 4
-        wineName.numberOfLines          = 0
-        statusIndicator.layer.cornerRadius = 3
+        bgView.layer.cornerRadius               = 10
+        bgView.layer.shadowColor                = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1).cgColor
+        bgView.layer.shadowOpacity              =  0.20
+        bgView.layer.shadowOffset               = CGSize(width: 0, height: 5)
+        bgView.layer.shadowRadius               = 4
+        wineName.numberOfLines                  = 0
+        statusIndicator.layer.cornerRadius      = 3
     }
 
     

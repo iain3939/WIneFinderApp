@@ -14,20 +14,21 @@ class WFWineCategroyVC: UIViewController {
     var dataSet = DataSet()
     var selectedWineCategoryToPass: String!
     
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
     }
+    
 }
 
-    extension WFWineCategroyVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+
+extension WFWineCategroyVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dataSet.wineCategoryArray.count
     }
@@ -41,17 +42,21 @@ class WFWineCategroyVC: UIViewController {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        selectedWineCategoryToPass = dataSet.wineCategoryArray[indexPath.item].name
+        
         if let vc = storyboard?.instantiateViewController(identifier: Segue.selectedWine) as? WFMainWineVC {
             vc.selectedWineCategory = dataSet.wineCategoryArray[indexPath.item].name
+            vc.title = selectedWineCategoryToPass
             navigationController?.pushViewController(vc, animated: true)
         }
     }
 }
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
 
 

@@ -15,8 +15,6 @@ class DataSet {
         case roseWine   = "Rose Wine"
     }
     
-
-    
     let wineCategoryArray = [
         WineCategorys(name: WineCategory.whiteWine.rawValue, wineImage: "white", backgroundColor: #colorLiteral(red: 0.9999127984, green: 1, blue: 0.9998814464, alpha: 1)),
         WineCategorys(name: WineCategory.redWine.rawValue, wineImage: "red", backgroundColor: #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1)),
@@ -254,19 +252,17 @@ var roseWineArray = [
     
 ]
     
-    func getWineSets(forCategoryName name: String) -> [Wine] {
+    func getWineSets(forCategoryName name: WineCategory) -> [Wine] {
         switch name {
-        case "Red Wine":
+        case .redWine:
             return redWineArray
             
-        case "White Wine":
+        case .whiteWine:
             return whiteWineArray
             
-        case "Rose Wine":
+        case .roseWine:
             return roseWineArray
             
-        default:
-            return whiteWineArray
         }
     }
 }

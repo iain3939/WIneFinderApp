@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4sk-dd-qAN">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -100,7 +100,7 @@
             </objects>
             <point key="canvasLocation" x="631.8840579710145" y="105.80357142857143"/>
         </scene>
-        <!--wine-->
+        <!--Main WineVC-->
         <scene sceneID="uaB-nt-zH1">
             <objects>
                 <viewController storyboardIdentifier="SelectedWine" id="4WL-oz-bse" customClass="WFMainWineVC" customModule="WineFinderApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -193,7 +193,7 @@
                             <constraint firstItem="oT3-2z-RCu" firstAttribute="top" secondItem="Dah-eQ-dx8" secondAttribute="top" id="zkC-ug-psq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="wine" id="ju8-hG-Luw"/>
+                    <navigationItem key="navigationItem" id="ju8-hG-Luw"/>
                     <connections>
                         <outlet property="collectionView" destination="oT3-2z-RCu" id="RPZ-pc-EaQ"/>
                     </connections>
