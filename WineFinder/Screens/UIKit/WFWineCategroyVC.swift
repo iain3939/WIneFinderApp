@@ -11,8 +11,14 @@ class WFWineCategroyVC: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    let height = 280
+    let columns: CGFloat = 1.0
+    let insets: CGFloat = 20.0
+    let spacing: CGFloat = 10.0
+    let lineSpacing: CGFloat = 20.0
+    
     var dataSet = DataSet()
-    var selectedWineCategoryToPass: String!
+    var selectedWineCategoryToPass: String! 
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -25,8 +31,13 @@ class WFWineCategroyVC: UIViewController {
         collectionView.dataSource = self
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let wineDetailVC = segue.destination as? WFMainWineVC {
+            wineDetailVC.selectedWineCategory = selectedWineCategoryToPass
+            wineDetailVC.title = selectedWineCategoryToPass
+        }
+    }
 }
-
 
 extension WFWineCategroyVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -37,19 +48,30 @@ extension WFWineCategroyVC: UICollectionViewDelegate, UICollectionViewDataSource
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIdentifiers.wineCategoryCell, for: indexPath) as! WineSelectionCell
         let item = dataSet.wineCategoryArray[indexPath.item]
         cell.configureCell(category: item)
-        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
         selectedWineCategoryToPass = dataSet.wineCategoryArray[indexPath.item].name
-        
-        if let vc = storyboard?.instantiateViewController(identifier: Segue.selectedWine) as? WFMainWineVC {
-            vc.selectedWineCategory = dataSet.wineCategoryArray[indexPath.item].name
-            vc.title = selectedWineCategoryToPass
-            navigationController?.pushViewController(vc, animated: true)
-        }
+        performSegue(withIdentifier: Segue.selectedWine, sender: self)
+    }
+    
+    // MARK: - Flow Layout Delegates
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = Int((collectionView.frame.width / columns) - (insets + spacing))
+        return CGSize(width: width, height: height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: insets, left: insets, bottom: insets, right: insets)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return spacing
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return lineSpacing
     }
 }
 

@@ -20,36 +20,36 @@
                             <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Qkc-A8-0de">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" red="0.98429568527918787" green="0.98429568527918787" blue="0.98429568527918787" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="40" minimumInteritemSpacing="10" id="1jZ-kg-zYF">
-                                    <size key="itemSize" width="384" height="246"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="1jZ-kg-zYF">
+                                    <size key="itemSize" width="399" height="246"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="20" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WineCategoryCell" id="J5v-ID-DpV" customClass="WineSelectionCell" customModule="WineFinderApp" customModuleProvider="target">
-                                        <rect key="frame" x="15" y="20" width="384" height="246"/>
+                                        <rect key="frame" x="7.5" y="0.0" width="399" height="246"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Jqm-Se-5Y2">
-                                            <rect key="frame" x="0.0" y="0.0" width="384" height="246"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="399" height="246"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H5a-4x-IJb">
-                                                    <rect key="frame" x="0.0" y="0.0" width="384" height="246"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="399" height="246"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="8T5-9u-Vot">
-                                                            <rect key="frame" x="20" y="20" width="344" height="206"/>
+                                                            <rect key="frame" x="10" y="10" width="379" height="226"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rose Wine" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ddr-jR-vgO">
-                                                                    <rect key="frame" x="0.0" y="65" width="127" height="76.5"/>
+                                                                    <rect key="frame" x="0.0" y="94" width="162" height="38.5"/>
                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                                                     <color key="textColor" red="0.94144541029999995" green="0.42361551520000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rose" translatesAutoresizingMaskIntoConstraints="NO" id="x9G-wb-NIA">
-                                                                    <rect key="frame" x="155" y="19.5" width="189" height="167"/>
+                                                                    <rect key="frame" x="190" y="8" width="189" height="210"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" constant="167" id="Zgp-V0-Zpx"/>
+                                                                        <constraint firstAttribute="height" constant="210" id="Zgp-V0-Zpx"/>
                                                                         <constraint firstAttribute="width" constant="189" id="j6R-CO-iKe"/>
                                                                     </constraints>
                                                                 </imageView>
@@ -58,21 +58,21 @@
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="8T5-9u-Vot" secondAttribute="bottom" constant="20" id="Dlr-jb-Z8c"/>
-                                                        <constraint firstItem="8T5-9u-Vot" firstAttribute="leading" secondItem="H5a-4x-IJb" secondAttribute="leading" constant="20" id="EDm-4B-ZuA"/>
-                                                        <constraint firstAttribute="trailing" secondItem="8T5-9u-Vot" secondAttribute="trailing" constant="20" id="JJU-Sx-GlU"/>
-                                                        <constraint firstItem="8T5-9u-Vot" firstAttribute="top" secondItem="H5a-4x-IJb" secondAttribute="top" constant="20" id="lIy-dw-2ZW"/>
+                                                        <constraint firstItem="8T5-9u-Vot" firstAttribute="top" secondItem="H5a-4x-IJb" secondAttribute="top" constant="10" id="Rc3-nR-aVD"/>
+                                                        <constraint firstAttribute="bottom" secondItem="8T5-9u-Vot" secondAttribute="bottom" constant="10" id="TZw-CP-IdW"/>
+                                                        <constraint firstItem="8T5-9u-Vot" firstAttribute="leading" secondItem="H5a-4x-IJb" secondAttribute="leading" constant="10" id="lxT-Dm-xAa"/>
+                                                        <constraint firstAttribute="trailing" secondItem="8T5-9u-Vot" secondAttribute="trailing" constant="10" id="vMQ-qK-0v7"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="H5a-4x-IJb" secondAttribute="bottom" id="04k-hK-SJ5"/>
-                                                <constraint firstItem="H5a-4x-IJb" firstAttribute="top" secondItem="Jqm-Se-5Y2" secondAttribute="top" id="aEZ-DZ-2ej"/>
-                                                <constraint firstItem="H5a-4x-IJb" firstAttribute="leading" secondItem="Jqm-Se-5Y2" secondAttribute="leading" id="bcw-8A-Jed"/>
-                                                <constraint firstAttribute="trailing" secondItem="H5a-4x-IJb" secondAttribute="trailing" id="lW0-D2-ALI"/>
+                                                <constraint firstItem="H5a-4x-IJb" firstAttribute="leading" secondItem="Jqm-Se-5Y2" secondAttribute="leading" id="Chb-o4-O8g"/>
+                                                <constraint firstAttribute="trailing" secondItem="H5a-4x-IJb" secondAttribute="trailing" id="DLc-1m-Aj4"/>
+                                                <constraint firstAttribute="bottom" secondItem="H5a-4x-IJb" secondAttribute="bottom" id="cIH-vu-FsG"/>
+                                                <constraint firstItem="H5a-4x-IJb" firstAttribute="top" secondItem="Jqm-Se-5Y2" secondAttribute="top" id="pij-U4-ttb"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="384" height="246"/>
+                                        <size key="customSize" width="399" height="246"/>
                                         <connections>
                                             <outlet property="backgroundCard" destination="H5a-4x-IJb" id="opc-GX-Gho"/>
                                             <outlet property="detailImage" destination="x9G-wb-NIA" id="dzB-6c-vd8"/>
@@ -94,11 +94,12 @@
                     <navigationItem key="navigationItem" id="91j-02-9QY"/>
                     <connections>
                         <outlet property="collectionView" destination="Qkc-A8-0de" id="GOQ-xZ-aKK"/>
+                        <segue destination="4WL-oz-bse" kind="show" identifier="SelectedWine" id="kR5-FI-pUD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KAm-Yw-dId" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="631.8840579710145" y="105.80357142857143"/>
+            <point key="canvasLocation" x="630.43478260869574" y="105.80357142857143"/>
         </scene>
         <!--Main WineVC-->
         <scene sceneID="uaB-nt-zH1">
@@ -118,7 +119,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="MDr-Dv-pol" customClass="WineCell" customModule="WineFinderApp" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MainWineCell" id="MDr-Dv-pol" customClass="WineCell" customModule="WineFinderApp" customModuleProvider="target">
                                         <rect key="frame" x="20" y="0.0" width="374" height="226"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="qCh-US-eob">

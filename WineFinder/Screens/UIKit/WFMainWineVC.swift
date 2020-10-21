@@ -23,33 +23,28 @@ class WFMainWineVC: UIViewController, UICollectionViewDelegate {
     
     var dataSet = DataSet()
     var wines : [Wine] = []
-    var wineCategory :  WineCategorys!
     var selectedWineCategory: String!
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: #colorLiteral(red: 0.9414454103, green: 0.4236155152, blue: 0, alpha: 1)]
+        
         navigationController?.navigationBar.prefersLargeTitles = false
         navigationItem.hidesSearchBarWhenScrolling = false
         collectionView.delegate = self
         configureSearchController()
         applySnapshot(animatingDifferences: false)
         configureCollectionView()
-        
-
     }
-    
     
     func configureCollectionView() {
         collectionView.collectionViewLayout = generateLayout()
     }
-    
     
     func generateLayout() -> UICollectionViewLayout {
         let itemSize = NSCollectionLayoutSize(
@@ -63,7 +58,6 @@ class WFMainWineVC: UIViewController, UICollectionViewDelegate {
             widthDimension: .fractionalWidth(1.0),
             heightDimension: .fractionalWidth(2/3))
         
-        
         let group      = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: fullPhotoItem, count: 2)
         let section    = NSCollectionLayoutSection(group: group)
         let layout     = UICollectionViewCompositionalLayout(section: section)
@@ -71,16 +65,14 @@ class WFMainWineVC: UIViewController, UICollectionViewDelegate {
         return layout
     }
     
-    
     func makeDataSource() -> DataSource {
         dataSource = UICollectionViewDiffableDataSource<Section, Wine>(collectionView: collectionView, cellProvider: { (collectionView, indexPath, wine) -> UICollectionViewCell? in
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as? WineCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIdentifiers.MainWineCell, for: indexPath) as? WineCell
             cell?.configureCell(wine: wine)
             return cell
         })
         return dataSource
     }
-    
     
     func applySnapshot(animatingDifferences: Bool = true) {
         var snapshot = Snapshot()
@@ -89,7 +81,6 @@ class WFMainWineVC: UIViewController, UICollectionViewDelegate {
         dataSource.apply(snapshot, animatingDifferences: animatingDifferences)
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let wine = dataSource.itemIdentifier(for: indexPath) else { return }
         if #available(iOS 13.0, *) {
@@ -97,10 +88,8 @@ class WFMainWineVC: UIViewController, UICollectionViewDelegate {
             
             let host = UIHostingController(rootView: wineDetailView)
             navigationController?.pushViewController(host, animated: true)
-            print("item\(wine)")
         }
     }
-    
 }
 
 extension WFMainWineVC: UISearchResultsUpdating, UISearchBarDelegate {
@@ -114,14 +103,12 @@ extension WFMainWineVC: UISearchResultsUpdating, UISearchBarDelegate {
         }
     }
     
-    
     func updateSearchResults(for searchController: UISearchController) {
         // Work in progress the wine items are only showing up when the search field is tapped.
         // As wines array could be empty.
         wines = filteredWines(for: searchController.searchBar.text)
         applySnapshot()
     }
-    
     
     func configureSearchController() {
         searchController.searchResultsUpdater                   = self
