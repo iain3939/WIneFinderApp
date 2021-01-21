@@ -7,34 +7,51 @@
 
 import UIKit
 
-class WineCell: UICollectionViewCell {
+class WFWineItemsCell: UICollectionViewCell {
     
-    @IBOutlet weak var wineImg: UIImageView!
-    @IBOutlet weak var wineName: UILabel!
-    @IBOutlet weak var bgView: UIView!
-    @IBOutlet weak var statusIndicator: UIView!
+    let wineAvator     = WFWineItemsImageView(frame: .zero)
+    let wineListLabel       = WFWineItemsLabel(textAlignment: .center, fontSize: 11)
     
-    override func awakeFromNib() {
-        bgView.layer.cornerRadius               = 10
-        bgView.layer.shadowColor                = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1).cgColor
-        bgView.layer.shadowOpacity              =  0.20
-        bgView.layer.shadowOffset               = CGSize(width: 0, height: 5)
-        bgView.layer.shadowRadius               = 4
-        wineName.numberOfLines                  = 0
-        statusIndicator.layer.cornerRadius      = 3
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        configure()
     }
 
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
-    func configureCell(wine: Wine) {
-        wineImg.image                   = UIImage(named: wine.wineImg)
-        wineName.text                   = wine.wineName
+    
+    private func configure() {
+
+        addSubview(wineAvator)
+        addSubview(wineListLabel)
+        wineListLabel.numberOfLines = 0
+        let padding: CGFloat    = 8
         
-        if wine.isRanged == true {
-            statusIndicator.backgroundColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
-        } else {
-            statusIndicator.backgroundColor = #colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1)
-        }
-     }
+        NSLayoutConstraint.activate([
+
+            wineAvator.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
+            wineAvator.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
+            wineAvator.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),
+            wineAvator.heightAnchor.constraint(equalTo: wineAvator.widthAnchor),
+
+            wineListLabel.topAnchor.constraint(equalTo: wineAvator.bottomAnchor, constant: 12),
+            wineListLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
+            wineListLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),
+            wineListLabel.heightAnchor.constraint(equalToConstant: 50)
+        ])
+    }
+    
+    func configureCell(wineItem: Wine) {
+        wineListLabel.text = wineItem.wineName
+        wineAvator.image = UIImage(named: wineItem.wineImg)
+        
+    }
+    
+    
 }
+
 
 

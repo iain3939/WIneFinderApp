@@ -8,11 +8,13 @@
 import UIKit
 
 
-struct WineCategorys {
-    var  name : String
-    var  wineImage : String
-    var  backgroundColor : UIColor
+struct WineCategorys: Codable, Hashable {
+    var  categoryName : String
+    var  categoryImageURL : String
+    var  wineCategorys: [Wine]
     
+    
+    static let jsonMockData = Bundle.main.decode([WineCategorys].self, from: "JsonWineList.json")
 }
 
 

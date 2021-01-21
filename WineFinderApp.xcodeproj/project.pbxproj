@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5726AE8924F3B24B00328FBD /* DataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5726AE8824F3B24B00328FBD /* DataSet.swift */; };
+		5722774F25B8843600B809F4 /* WFWineCategroyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5722774E25B8843600B809F4 /* WFWineCategroyVC.swift */; };
 		5745C3362512724500C9AE21 /* WFProductStoreDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5745C3352512724500C9AE21 /* WFProductStoreDetail.swift */; };
+		5773F47125B59A46001AC05B /* JsonWineList.json in Resources */ = {isa = PBXBuildFile; fileRef = 5773F47025B59A46001AC05B /* JsonWineList.json */; };
+		5773F47425B59A83001AC05B /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5773F47325B59A83001AC05B /* Bundle-Decodable.swift */; };
+		5773F47825B5A161001AC05B /* WFWineItemsImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5773F47625B5A161001AC05B /* WFWineItemsImageView.swift */; };
+		5773F47925B5A161001AC05B /* WFWineItemsLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5773F47725B5A161001AC05B /* WFWineItemsLabel.swift */; };
+		5773F47C25B5A484001AC05B /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5773F47B25B5A483001AC05B /* UIHelper.swift */; };
 		577EC8E324EEC0650043977A /* WineCategorys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577EC8E224EEC0650043977A /* WineCategorys.swift */; };
-		577EC8E624EEC1E80043977A /* WFWineCategroyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577EC8E524EEC1E80043977A /* WFWineCategroyVC.swift */; };
-		577EC8E824EEC2170043977A /* WineSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577EC8E724EEC2170043977A /* WineSelectionCell.swift */; };
+		577EC8E824EEC2170043977A /* WFCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577EC8E724EEC2170043977A /* WFCategoryCell.swift */; };
 		57C55C8C251244C500A571B5 /* WFWineDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C55C8B251244C500A571B5 /* WFWineDetailView.swift */; };
 		57C55C932512450900A571B5 /* WFPriceCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C55C8D2512450900A571B5 /* WFPriceCard.swift */; };
 		57C55C942512450900A571B5 /* WFAlcoholCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C55C8E2512450900A571B5 /* WFAlcoholCard.swift */; };
@@ -22,20 +26,24 @@
 		57E5946724ED7A930023545A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E5946224ED7A930023545A /* Constants.swift */; };
 		57E9213424E9336600B0AA03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E9213324E9336600B0AA03 /* AppDelegate.swift */; };
 		57E9213624E9336600B0AA03 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E9213524E9336600B0AA03 /* SceneDelegate.swift */; };
-		57E9213824E9336600B0AA03 /* WFMainWineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E9213724E9336600B0AA03 /* WFMainWineVC.swift */; };
+		57E9213824E9336600B0AA03 /* WFWineItemsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E9213724E9336600B0AA03 /* WFWineItemsVC.swift */; };
 		57E9213B24E9336600B0AA03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57E9213924E9336600B0AA03 /* Main.storyboard */; };
 		57E9213D24E9336800B0AA03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57E9213C24E9336800B0AA03 /* Assets.xcassets */; };
 		57E9214024E9336800B0AA03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57E9213E24E9336800B0AA03 /* LaunchScreen.storyboard */; };
 		57E9214824E9339200B0AA03 /* Wine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E9214724E9339200B0AA03 /* Wine.swift */; };
-		57E9214A24E93BE500B0AA03 /* WineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E9214924E93BE500B0AA03 /* WineCell.swift */; };
+		57E9214A24E93BE500B0AA03 /* WFWineItemsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E9214924E93BE500B0AA03 /* WFWineItemsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5726AE8824F3B24B00328FBD /* DataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSet.swift; sourceTree = "<group>"; };
+		5722774E25B8843600B809F4 /* WFWineCategroyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WFWineCategroyVC.swift; sourceTree = "<group>"; };
 		5745C3352512724500C9AE21 /* WFProductStoreDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WFProductStoreDetail.swift; sourceTree = "<group>"; };
+		5773F47025B59A46001AC05B /* JsonWineList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = JsonWineList.json; sourceTree = "<group>"; };
+		5773F47325B59A83001AC05B /* Bundle-Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
+		5773F47625B5A161001AC05B /* WFWineItemsImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WFWineItemsImageView.swift; sourceTree = "<group>"; };
+		5773F47725B5A161001AC05B /* WFWineItemsLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WFWineItemsLabel.swift; sourceTree = "<group>"; };
+		5773F47B25B5A483001AC05B /* UIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		577EC8E224EEC0650043977A /* WineCategorys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineCategorys.swift; sourceTree = "<group>"; };
-		577EC8E524EEC1E80043977A /* WFWineCategroyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WFWineCategroyVC.swift; sourceTree = "<group>"; };
-		577EC8E724EEC2170043977A /* WineSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineSelectionCell.swift; sourceTree = "<group>"; };
+		577EC8E724EEC2170043977A /* WFCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WFCategoryCell.swift; sourceTree = "<group>"; };
 		57C55C8B251244C500A571B5 /* WFWineDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WFWineDetailView.swift; sourceTree = "<group>"; };
 		57C55C8D2512450900A571B5 /* WFPriceCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WFPriceCard.swift; sourceTree = "<group>"; };
 		57C55C8E2512450900A571B5 /* WFAlcoholCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WFAlcoholCard.swift; sourceTree = "<group>"; };
@@ -47,13 +55,13 @@
 		57E9213024E9336600B0AA03 /* WineFinderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WineFinderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57E9213324E9336600B0AA03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57E9213524E9336600B0AA03 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		57E9213724E9336600B0AA03 /* WFMainWineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WFMainWineVC.swift; sourceTree = "<group>"; };
+		57E9213724E9336600B0AA03 /* WFWineItemsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WFWineItemsVC.swift; sourceTree = "<group>"; };
 		57E9213A24E9336600B0AA03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		57E9213C24E9336800B0AA03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57E9213F24E9336800B0AA03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57E9214124E9336800B0AA03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57E9214724E9339200B0AA03 /* Wine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wine.swift; sourceTree = "<group>"; };
-		57E9214924E93BE500B0AA03 /* WineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineCell.swift; sourceTree = "<group>"; };
+		57E9214924E93BE500B0AA03 /* WFWineItemsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WFWineItemsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +87,8 @@
 		572DAA4424F6BD2100F6DDA6 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				57E9214924E93BE500B0AA03 /* WineCell.swift */,
-				577EC8E724EEC2170043977A /* WineSelectionCell.swift */,
+				577EC8E724EEC2170043977A /* WFCategoryCell.swift */,
+				57E9214924E93BE500B0AA03 /* WFWineItemsCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -88,6 +96,9 @@
 		572DAA4524F6BD2E00F6DDA6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5773F47B25B5A483001AC05B /* UIHelper.swift */,
+				5773F47625B5A161001AC05B /* WFWineItemsImageView.swift */,
+				5773F47725B5A161001AC05B /* WFWineItemsLabel.swift */,
 				572DAA4424F6BD2100F6DDA6 /* Cells */,
 				579EF04A252488F10029A8ED /* SwiftUI Cards */,
 			);
@@ -97,8 +108,8 @@
 		577E24182524BDA00025853C /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				577EC8E524EEC1E80043977A /* WFWineCategroyVC.swift */,
-				57E9213724E9336600B0AA03 /* WFMainWineVC.swift */,
+				5722774E25B8843600B809F4 /* WFWineCategroyVC.swift */,
+				57E9213724E9336600B0AA03 /* WFWineItemsVC.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -106,9 +117,10 @@
 		577EC8E424EEC06B0043977A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				57E9214724E9339200B0AA03 /* Wine.swift */,
+				5773F47025B59A46001AC05B /* JsonWineList.json */,
+				5773F47325B59A83001AC05B /* Bundle-Decodable.swift */,
 				577EC8E224EEC0650043977A /* WineCategorys.swift */,
-				5726AE8824F3B24B00328FBD /* DataSet.swift */,
+				57E9214724E9339200B0AA03 /* Wine.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -243,6 +255,7 @@
 			files = (
 				57E9214024E9336800B0AA03 /* LaunchScreen.storyboard in Resources */,
 				57E9213D24E9336800B0AA03 /* Assets.xcassets in Resources */,
+				5773F47125B59A46001AC05B /* JsonWineList.json in Resources */,
 				57E9213B24E9336600B0AA03 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,24 +267,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5773F47925B5A161001AC05B /* WFWineItemsLabel.swift in Sources */,
 				577EC8E324EEC0650043977A /* WineCategorys.swift in Sources */,
 				57C55C942512450900A571B5 /* WFAlcoholCard.swift in Sources */,
+				5773F47C25B5A484001AC05B /* UIHelper.swift in Sources */,
 				57C55C952512450900A571B5 /* WFCountry.swift in Sources */,
-				577EC8E824EEC2170043977A /* WineSelectionCell.swift in Sources */,
+				577EC8E824EEC2170043977A /* WFCategoryCell.swift in Sources */,
 				57C55C972512450900A571B5 /* WFWineImageCard.swift in Sources */,
 				5745C3362512724500C9AE21 /* WFProductStoreDetail.swift in Sources */,
-				5726AE8924F3B24B00328FBD /* DataSet.swift in Sources */,
-				57E9214A24E93BE500B0AA03 /* WineCell.swift in Sources */,
+				57E9214A24E93BE500B0AA03 /* WFWineItemsCell.swift in Sources */,
 				57C55C8C251244C500A571B5 /* WFWineDetailView.swift in Sources */,
 				57E9214824E9339200B0AA03 /* Wine.swift in Sources */,
-				57E9213824E9336600B0AA03 /* WFMainWineVC.swift in Sources */,
+				57E9213824E9336600B0AA03 /* WFWineItemsVC.swift in Sources */,
+				5722774F25B8843600B809F4 /* WFWineCategroyVC.swift in Sources */,
 				57E5946724ED7A930023545A /* Constants.swift in Sources */,
 				57C55C982512450900A571B5 /* WFDescriptionCard.swift in Sources */,
 				57E9213424E9336600B0AA03 /* AppDelegate.swift in Sources */,
-				577EC8E624EEC1E80043977A /* WFWineCategroyVC.swift in Sources */,
 				57C55C932512450900A571B5 /* WFPriceCard.swift in Sources */,
+				5773F47825B5A161001AC05B /* WFWineItemsImageView.swift in Sources */,
 				57E9213624E9336600B0AA03 /* SceneDelegate.swift in Sources */,
 				57C55C962512450900A571B5 /* WFStockCard.swift in Sources */,
+				5773F47425B59A83001AC05B /* Bundle-Decodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

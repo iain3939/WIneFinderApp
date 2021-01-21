@@ -9,11 +9,12 @@ import UIKit
 
 
 enum CellIdentifiers {
-    static let wineCategoryCell     = "WineCategoryCell"
-    static let MainWineCell         = "MainWineCell"
+    static let wineCategoryIdentifire       = "WineCategoryCell"
+    static let wineItemsIdentifier          = "MainWineCell"
 }
+
 enum Segue {
-    static let selectedWine         = "SelectedWine"
+    static let selectedWine                 = "SelectedWine"
 }
 
 

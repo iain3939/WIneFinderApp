@@ -8,8 +8,8 @@
 import UIKit
 
 
-struct Wine: Hashable {
-    var id = UUID()
+struct Wine: Codable, Hashable {
+    
     
     var wineName: String
     var wineDescription: String
@@ -17,23 +17,16 @@ struct Wine: Hashable {
     var wineFood: String
     var wineImg: String
     var wineAlcohol: String
-    var alcoholConetent: String
+    var alcoholContent: String
     var grapeVariety: String
     var wineColor: String
     var typeOfClosure: String
-    var Tastecategory: String
+    var tasteCategory: String
     var isRanged: Bool
     
     
     
-    func hash(into hasher: inout Hasher) {
-      
-      hasher.combine(id)
-    }
-   
-    static func == (lhs: Wine, rhs: Wine) -> Bool {
-      lhs.id == rhs.id
-    }
+    
     
     
     

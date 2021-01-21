@@ -1,5 +1,5 @@
 //
-//  WineSelectionCell.swift
+//  WFWineItemsCell.swift
 //  WineFinder
 //
 //  Created by iain Allen on 20/08/2020.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WineSelectionCell: UICollectionViewCell {
+class WFCategoryCell: UICollectionViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var detailImage: UIImageView!
@@ -25,8 +25,8 @@ class WineSelectionCell: UICollectionViewCell {
     
     
     func configureCell(category: WineCategorys) {
-        nameLabel.text                    = category.name
-        detailImage.image                 = UIImage(named: category.wineImage)
-        backgroundCard.backgroundColor    = category.backgroundColor
+        nameLabel.text                    = category.categoryName
+        detailImage.image                 = UIImage(named: category.categoryImageURL)
+        
     }
 }
