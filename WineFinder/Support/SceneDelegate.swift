@@ -20,9 +20,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        let navigationController = UINavigationController(rootViewController: WFWineCategroyVC())
-        window?.rootViewController = navigationController
+        window?.rootViewController = WFTabBarController()
         window?.makeKeyAndVisible()
+        
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
