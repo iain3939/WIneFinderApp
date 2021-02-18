@@ -10,12 +10,9 @@ import SwiftUI
 
 class WFWineItemsVC: UIViewController {
     
-    
     enum Section {
         case main
     }
-    
-   
     
     var wine: Wine!
     var wineItems: [Wine] = []
@@ -23,7 +20,6 @@ class WFWineItemsVC: UIViewController {
     var isSearching = false
     var collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<Section, Wine>!
-    
     
     init(wineItems: [Wine]) {
         super.init(nibName: nil, bundle: nil)
@@ -47,10 +43,7 @@ class WFWineItemsVC: UIViewController {
         configureDataSource()
         configureSearchController()
         updateData(on: wineItems)
-        
     }
-    
-    
     
     func configureSearchController() {
         let searchController = UISearchController()

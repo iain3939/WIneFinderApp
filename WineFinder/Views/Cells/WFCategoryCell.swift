@@ -56,7 +56,7 @@ class WFCategoryCell: UICollectionViewCell {
         ])
     }
     
-    func configureCell(category: WineCategorys) {
+    func configureCell(category: WineCategories) {
         categoryItemsLabel.text  = category.categoryName
         categoryImage.image      = UIImage(named: category.categoryImageURL)
     }

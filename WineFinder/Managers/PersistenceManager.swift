@@ -20,7 +20,7 @@ enum PersistenceManager {
     }
     
     
-    static func update(favorite: Wine, actionType: PersistenceActionType, completed: @escaping (WFError?) -> Void) {
+    static func update(favorite: Wine, actionType: PersistenceActionType, completed: @escaping (GFError?) -> Void) {
         retrieveFavorites { result in
             switch result {
             case .success(let favorites):
@@ -47,7 +47,7 @@ enum PersistenceManager {
         }
     }
     
-    static func retrieveFavorites(completed: @escaping (Result<[Wine], WFError>) -> Void) {
+    static func retrieveFavorites(completed: @escaping (Result<[Wine], GFError>) -> Void) {
         guard let wineListData = defaults.object(forKey: Keys.favorites) as? Data else  {
             completed(.success([]))
             return
@@ -65,7 +65,7 @@ enum PersistenceManager {
         
     }
     
-    static func save(favorites: [Wine]) -> WFError? {
+    static func save(favorites: [Wine]) -> GFError? {
         
         do {
             let encoder = JSONEncoder()

@@ -13,9 +13,9 @@ class WFWineCategroyVC: UIViewController {
         case main
     }
     
-    var mockdata = WineCategorys.jsonMockData
+    var mockdata = WineCategories.jsonMockData
     var collectionView: UICollectionView!
-    var dataSource: UICollectionViewDiffableDataSource<Section, WineCategorys>!
+    var dataSource: UICollectionViewDiffableDataSource<Section, WineCategories>!
     var naviationController: UINavigationController!
     
     override func viewDidLoad() {
@@ -39,15 +39,15 @@ class WFWineCategroyVC: UIViewController {
     }
     
     func configureDataSource() {
-        dataSource = UICollectionViewDiffableDataSource<Section, WineCategorys>(collectionView: collectionView, cellProvider: { (collectionView, indexPath, category) -> UICollectionViewCell? in
+        dataSource = UICollectionViewDiffableDataSource<Section, WineCategories>(collectionView: collectionView, cellProvider: { (collectionView, indexPath, category) -> UICollectionViewCell? in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIdentifiers.wineCategoryIdentifire, for: indexPath) as? WFCategoryCell
             cell?.configureCell(category: category)
             return cell
         })
     }
     
-    func updateData(on categorys: [WineCategorys]) {
-        var snapshot = NSDiffableDataSourceSnapshot<Section, WineCategorys>()
+    func updateData(on categorys: [WineCategories]) {
+        var snapshot = NSDiffableDataSourceSnapshot<Section, WineCategories>()
         snapshot.appendSections([.main])
         snapshot.appendItems(mockdata)
         DispatchQueue.main.async {
@@ -61,7 +61,7 @@ extension WFWineCategroyVC: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let category = mockdata[indexPath.row]
         
-        let vc = WFWineItemsVC(wineItems: category.wineCategorys)
+        let vc = WFWineItemsVC(wineItems: category.wineCategories)
         vc.title = category.categoryName
         navigationController?.pushViewController(vc, animated: true)
     }

@@ -1,6 +1,6 @@
 //
-//  WFError.swift
-//  WineFinder
+//  GFError.swift
+//  GHFollowers
 //
 //  Created by iain Allen on 04/01/2020.
 //  Copyright © 2020 iain Allen. All rights reserved.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum WFError: String, Error {
+enum GFError: String, Error {
     
     case invalidUsername    = "This username created a invalid reauest. Please try again"
     case unableToComplete   = "Unable to complete your request. PLease check your internet connection"

@@ -4,8 +4,7 @@
         "categoryName" : "White Wine",
         "categoryImageURL" : "white",
         
-        
-        "wineCategorys" : [
+        "wineCategories" : [
 
             {
               "wineName": "Brancott Estate Sauvignon Blanc 75cl",
@@ -111,7 +110,7 @@
     {
         "categoryName" : "Red Wine",
         "categoryImageURL" : "red",
-        "wineCategorys" : [
+        "wineCategories" : [
               {
                      "wineName": "McGuigan Estate Merlot 75cl",
                      "wineDescription": "Wine of South Eastern Australia Outstandingly intense and rich wines from the premium vineyards of South Eastern Australia. Brian McGuigan, Founder The McGuigan Estate wines are produced using carefully harvested fruit from our best vineyards across South Eastern Australia. Generations of McGuigan winemaking experience goes into every bottle. This Merlot is a smooth and easy drinking wine with intense fruit flavours of plum and red berries.",
@@ -218,7 +217,7 @@
 
         "categoryName" : "Rose Wine",
         "categoryImageURL" : "rose",
-        "wineCategorys" : [
+        "wineCategories" : [
           {
                  "wineName": "Sainsbury's Côtes De Provence Rosé, Taste the Difference 75cl",
                  "wineDescription": "Côtes de Provence Rosé",
