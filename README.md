@@ -1,2 +1,2 @@
 # WineFinderApp
-A wine finder app
+A wine finder app written in Swift and SwiftUI
