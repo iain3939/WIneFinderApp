@@ -9,7 +9,7 @@ import UIKit
 
 
 enum CellIdentifiers {
-    static let wineCategoryIdentifire       = "WineCategoryCell"
+    static let wineCategoryIdentifier       = "WineCategoryCell"
     static let wineItemsIdentifier          = "MainWineCell"
 }
 

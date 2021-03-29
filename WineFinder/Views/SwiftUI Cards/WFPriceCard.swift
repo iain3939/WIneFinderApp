@@ -33,12 +33,12 @@ struct WFPriceCard: View {
             Divider()
             HStack {
                 
-                 Text("£6.80")
+                Text("£6.80")
                     .font(.title2)
                     .fontWeight(.medium)
                     .foregroundColor(.gray)
                 Spacer()
-                wine.isRanged ? Text("12 (36)") : Text("0")
+                Text("\(wine.isRanged ? "12(36)" : "0")")
                     .font(.title2)
                     .fontWeight(.medium)
                     .foregroundColor(.gray)
@@ -48,7 +48,6 @@ struct WFPriceCard: View {
         }
         .background(Color.white)
         .cornerRadius(14)
-        
         .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
     }
 }

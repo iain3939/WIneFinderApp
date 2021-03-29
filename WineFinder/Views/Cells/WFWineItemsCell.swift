@@ -1,5 +1,5 @@
 //
-//  CollectionViewCell.swift
+//  WFWineItemsCell.swift
 //  WineFinder
 //
 //  Created by iain Allen on 16/08/2020.
@@ -10,7 +10,7 @@ import UIKit
 class WFWineItemsCell: UICollectionViewCell {
     
     let wineItemsImageView     = WFWineItemsImageView(frame: .zero)
-    let wineItemsLabel       = WFWineItemsLabel(textAlignment: .center, fontSize: 11)
+    let wineItemsLabel         = WFWineItemsLabel(textAlignment: .center, fontSize: 11)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -51,7 +51,6 @@ class WFWineItemsCell: UICollectionViewCell {
     func configureCell(wineItem: Wine) {
         wineItemsLabel.text = wineItem.wineName
         wineItemsImageView.image = UIImage(named: wineItem.wineImg)
-        
     }
 }
 

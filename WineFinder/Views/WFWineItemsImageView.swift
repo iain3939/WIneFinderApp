@@ -1,5 +1,5 @@
 //
-//  GFAvatarImageView.swift
+//  WFWineItemsImageView.swift
 //  WineFinder
 //
 //  Created by iain Allen on 05/01/2020.
@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 
 class WFWineItemsImageView: UIImageView {
     
@@ -19,8 +18,7 @@ class WFWineItemsImageView: UIImageView {
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
     
     private func configure() {
-       
-        clipsToBounds      = true
+        clipsToBounds      = false
         translatesAutoresizingMaskIntoConstraints = false
     }
     

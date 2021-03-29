@@ -1,8 +1,9 @@
 [
     {
 
-        "categoryName" : "White Wine",
+        "categoryName" : "White",
         "categoryImageURL" : "white",
+        "backgroundColor" :"#28df99",
         
         "wineCategories" : [
 
@@ -108,8 +109,9 @@
     },
 
     {
-        "categoryName" : "Red Wine",
+        "categoryName" : "Red",
         "categoryImageURL" : "red",
+        "backgroundColor" :"#f0c929",
         "wineCategories" : [
               {
                      "wineName": "McGuigan Estate Merlot 75cl",
@@ -215,8 +217,9 @@
 
     {
 
-        "categoryName" : "Rose Wine",
+        "categoryName" : "Rose",
         "categoryImageURL" : "rose",
+        "backgroundColor" :"#f62459",
         "wineCategories" : [
           {
                  "wineName": "Sainsbury's Côtes De Provence Rosé, Taste the Difference 75cl",
@@ -317,6 +320,128 @@
                  "isRanged": false
           }
         ]
+    },
+    {
+        "categoryName" : "sparkling",
+        "categoryImageURL" : "sparkling",
+        "backgroundColor" :"#7fdbda",
+        
+        "wineCategories" : [
+            {
+                "wineName": "Valdo Prosecco Marca Oro 75cl",
+                "wineDescription": "Marco Oro is a fresh extra dry sparkling wine made with grapes picked from the Prosecco area. It has a light fruity bouquet and is best served at: 6-7°C.",
+                "wineCountry": "Italy",
+                "wineFood": "",
+                "wineImg": "valdo",
+                "wineAlcohol": "11%",
+                "alcoholContent": "8.25 units",
+                "grapeVariety": "Glera",
+                "wineColor":"White",
+                "typeOfClosure": "Natural Cork",
+                "tasteCategory": "2",
+                "isRanged": true
+            },
+            
+            {
+                "wineName": "Maschio Prosecco Doc Brut 75cl",
+                "wineDescription": "The roots of Cantine Maschio's passion for wine are as old as the vines on the Veneto's hills. The history of Cantine Maschio is also the history of Prosecco, a wine which, with its fresh, light and lively style, has created a new type of drinking geared towards conviviality, the aperitif and the cocktail known as a “spritz”.",
+                "wineCountry": "Italy",
+                "wineFood": "",
+                "wineImg": "maschio",
+                "wineAlcohol": "11%",
+                "alcoholContent": "8.25 units",
+                "grapeVariety": "Glera",
+                "wineColor":"White",
+                "typeOfClosure": "Natural Cork",
+                "tasteCategory": "2",
+                "isRanged": true
+            },
+            
+            {
+                "wineName": "Laurent-Perrier La Cuvée Champagne, Non Vintage 75cl",
+                "wineDescription": "La cuvée comes from the purest grape juice and it alone is hand-crafted by Laurent-Perrier to create wines of extreme delicacy and palate-pleasing freshness through lengthy cellar-ageing.",
+                "wineCountry": "France",
+                "wineFood": "",
+                "wineImg": "laurent",
+                "wineAlcohol": "12%",
+                "alcoholContent": "9 units",
+                "grapeVariety": "Chardonnay, Pinot Noir, Pinot Meunier",
+                "wineColor":"White",
+                "typeOfClosure": "Natural Cork",
+                "tasteCategory": "2",
+                "isRanged": true
+            },
+            
+            {
+                "wineName": "Freixenet Italian Sparkling Rose Extra Dry Wine 75cl",
+                "wineDescription": "Presented in a striking cut-glass bottle, Freixenet Italian Rosé blends superior quality with stunning beauty. Using its extensive sparkling winemaking expertise, Freixenet has created the Rosé sibling to Frexienet's widely successful Prosecco. A stand-out rosé that is perfect to make any occasion extra special. Freixenet Italian Rosé is a delicate blend of Glera and Pinot Noir grapes, carefully selected from the finest Italian vineyards. Light and effervescent,with notes of red berries and underlying hints of white flowers and apples. ",
+                "wineCountry": "Italy",
+                "wineFood": "",
+                "wineImg": "freixenet",
+                "wineAlcohol": "10.8%",
+                "alcoholContent": "8.64 units",
+                "grapeVariety": "Glera, Pinot Noir",
+                "wineColor":"Rosé",
+                "typeOfClosure": "Natural Cork",
+                "tasteCategory": "2",
+                "isRanged": true
+            },
+            
+            {
+                "wineName": "Veuve Clicquot Yellow Label Brut Non Vintage Champagne 1.5L",
+                "wineDescription": "Veuve Clicquot Ponsardin 'Only one quality, the finest'. This is the motto of the House of Veuve Clicquot Ponsardin, founded in 1772. This cuvée bears the famous 'Clicquot Yellow' label, a symbol of excellence.",
+                "wineCountry": "France",
+                "wineFood": "The Champagne presents a fine balance between fruity aromas and more subtle toasty notes. Initial flavours of white fruits and raisins develop into notes of brioche and vanilla with bottle aging.",
+                "wineImg": "veuve",
+                "wineAlcohol": "12%",
+                "alcoholContent": "18 units",
+                "grapeVariety": "50 to 55% Pinot Noir, 15 to 20% Pinot Meunier, 28 to 33% Chardonnay",
+                "wineColor":"White",
+                "typeOfClosure": "Natural Cork",
+                "tasteCategory": "2",
+                "isRanged": true
+            },
+            
+            {
+                "wineName": "Canti Prosecco 75cl",
+                "wineDescription": "Prosecco began to be made in its modern, light, dry style at some point in the early 1960's. Canti prosecco was born in the early 2000's when Fratelli Martini, a company with a long history of producing high quality prosecco under other labels started the Canti brand.",
+                "wineCountry": "France",
+                "wineFood": "Pale straw in colour with bouquet and taste of green apples and flowers. Excellent as an aperitif or with lightly salted dishes.",
+                "wineImg": "canti",
+                "wineAlcohol": "11%%",
+                "alcoholContent": "N/A",
+                "grapeVariety": "Glera",
+                "wineColor":"White",
+                "typeOfClosure": "Natural Cork",
+                "tasteCategory": "2",
+                "isRanged": true
+            },
+            
+            {
+                "wineName": "Moet & Chandon Nectar Imperial 75cl",
+                "wineDescription": "With its exotic fruitiness, vibrant freshness and bold yellow colour, Nectar Impérial, a sweeter demi-sec style is a delightful blend of richness and elegance. Since 1743, Moët & Chandon has been the definitive reference for champagne. The quality of its wines expresses the extent and diversity of its fabulous vineyard estate, the largest in Champagne, consisting predominantly of Premier and Grand Cru vineyards. Nectar Impérial, an unexpected and original creation, is a daring and completely spontaneous expression of Moët & Chandon. A rich and succulent blend of Pinot Noir, Pinot Meunier and Chardonnay, Nectar Impérial combines opulence and freshness with intensity and smoothness.",
+                "wineCountry": "France",
+                "wineFood": "A voluptuous palate combining creaminess and vibrancy: The captivating density of exotic fruits: pineapple and passion fruit. The silky fi firmness of stone fruits: Mirabelle and apricot. The brisk freshness of grapefruit notes.",
+                "wineImg": "moet",
+                "wineAlcohol": "12.5%",
+                "alcoholContent": "9.38 units",
+                "grapeVariety": "40-50% Pinot Noir, 30-40% Meunier, 10-20%Chardonnay",
+                "wineColor":"White",
+                "typeOfClosure": "Natural Cork",
+                "tasteCategory": "2",
+                "isRanged": true
+            },
+            
+            
+            
+            
+            
+           
+            
+            
+        ]
     }
+    
+    
 
 ]

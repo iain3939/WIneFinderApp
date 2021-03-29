@@ -9,6 +9,7 @@ import SwiftUI
 
 struct WFWineImageCard: View {
     let color = #colorLiteral(red: 0.9338523746, green: 0.9283010364, blue: 0.9381195903, alpha: 1)
+    @State private var isAlertShowing = false
     
     let wine: Wine
     init(wine: Wine) {
@@ -18,81 +19,101 @@ struct WFWineImageCard: View {
     var body: some View {
         
         
-        VStack(alignment: .center, spacing: 15) {
-            Image(uiImage: UIImage(named: wine.wineImg)!)
-                .resizable()
-                .frame(width: 250, height: 250, alignment: .center)
-                .aspectRatio(contentMode: .fill)
+        ZStack {
             
-            Text(wine.wineName)
-                .font(Font.system(size: 17))
-                .fontWeight(.medium)
-                .foregroundColor(.gray)
-                .lineLimit(nil)
-                .multilineTextAlignment(.center)
             
-            HStack(spacing:5) {
-                Text("Dry")
-                Spacer()
-                Group {
-                    Image(systemName: "1.circle")
-                    Image(systemName: "2.circle.fill")
-                    Image(systemName: "3.circle")
-                    Image(systemName: "4.circle")
-                    Image(systemName: "5.circle")
-                    Image(systemName: "6.circle")
-                    Image(systemName: "7.circle")
-                    Image(systemName: "8.circle")
-                }
-                Spacer()
-                Text("Sweet")
-            }
-            .foregroundColor(.gray)
-            .padding(EdgeInsets(top: 0, leading: 40, bottom: 0, trailing: 40))
-            
-            HStack {
-                Spacer()
-                HStack {
-                    addButton(wine: wine)
-                    
+            VStack(alignment: .center, spacing: 15) {
+                Image(uiImage: UIImage(named: wine.wineImg)!)
+                    .resizable()
+                    .frame(width: 250, height: 250, alignment: .center)
+                    .aspectRatio(contentMode: .fill)
+                
+                Text(wine.wineName)
+                    .font(Font.system(size: 17))
+                    .fontWeight(.medium)
+                    .foregroundColor(.gray)
+                    .lineLimit(nil)
+                    .multilineTextAlignment(.center)
+                
+                HStack(spacing:3) {
+                    Text("Dry")
                     Spacer()
-                    
+                    Group {
+                        Image(systemName: "1.circle")
+                        Image(systemName: "2.circle.fill")
+                        Image(systemName: "3.circle")
+                        Image(systemName: "4.circle")
+                        Image(systemName: "5.circle")
+                        Image(systemName: "6.circle")
+                        Image(systemName: "7.circle")
+                        Image(systemName: "8.circle")
+                    }
+                    Spacer()
+                    Text("Sweet")
                 }
-                if wine.isRanged == true {
-                Text("Ranged")
-                    .font(Font.system(size: 15))
-                    .fontWeight(.semibold)
-                    .foregroundColor(Color.green)
-                    
-                    .frame(width: 120, height: 22)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 14)
-                            .stroke(Color.green, lineWidth: 3)
-                    )
-                    .cornerRadius(14)
-                    .padding(.trailing, 40)
-                    .padding(.bottom,20)
-                } else {
-                    Text("Not-Ranged")
+                .foregroundColor(.gray)
+                
+                .padding(EdgeInsets(top: 0, leading: 40, bottom: 0, trailing: 40))
+                
+                HStack {
+                    Spacer()
+                    HStack {
+                        
+                       
+                            addButton(isAlertShowing: $isAlertShowing, wine: wine)
+                                .animation(.easeInOut)
+                        
+                        
+                        
+                        Spacer()
+                        
+                    }
+                    if wine.isRanged == true {
+                    Text("Ranged")
                         .font(Font.system(size: 15))
                         .fontWeight(.semibold)
-                        .foregroundColor(Color.red)
+                        .foregroundColor(Color.green)
                         
                         .frame(width: 120, height: 22)
                         .overlay(
                             RoundedRectangle(cornerRadius: 14)
-                                .stroke(Color.red, lineWidth: 3)
+                                .stroke(Color.green, lineWidth: 3)
                         )
                         .cornerRadius(14)
                         .padding(.trailing, 40)
                         .padding(.bottom,20)
+                    } else {
+                        Text("Not-Ranged")
+                            .font(Font.system(size: 15))
+                            .fontWeight(.semibold)
+                            .foregroundColor(Color.red)
+                            
+                            .frame(width: 120, height: 22)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 14)
+                                    .stroke(Color.red, lineWidth: 3)
+                            )
+                            .cornerRadius(14)
+                            .padding(.trailing, 40)
+                            .padding(.bottom,20)
+                    }
                 }
             }
+            .background(Color.white)
+            .cornerRadius(14)
+            .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+            
+            if isAlertShowing {
+                WFAlertPopup(isAlertShowing: $isAlertShowing)
+                    
+                    .onAppear(perform: {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
+                                    self.isAlertShowing = false
+                                })
+            })
         }
-        .background(Color.white)
-        .cornerRadius(14)
-        .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
     }
+}
 }
 
 struct WFWineImageCard_Previews: PreviewProvider {
@@ -102,10 +123,15 @@ struct WFWineImageCard_Previews: PreviewProvider {
 }
 
 struct addButton: View {
+    @Binding var isAlertShowing: Bool
     let wine: Wine
     var body: some View {
         HStack {
             Button {
+                withAnimation {
+                self.isAlertShowing = true
+                    
+                }
                 print("Add Button Tapped")
                 let wineItems = Wine(wineName: wine.wineName, wineDescription: wine.wineDescription, wineCountry: wine.wineCountry, wineFood: wine.wineFood, wineImg: wine.wineImg, wineAlcohol: wine.wineAlcohol, alcoholContent: wine.alcoholContent, grapeVariety: wine.grapeVariety, wineColor: wine.wineColor, typeOfClosure: wine.typeOfClosure, tasteCategory: wine.tasteCategory, isRanged: wine.isRanged)
                 PersistenceManager.update(favorite: wineItems, actionType: .add) { error in
@@ -128,3 +154,4 @@ struct addButton: View {
         .padding(.bottom,20)
     }
 }
+

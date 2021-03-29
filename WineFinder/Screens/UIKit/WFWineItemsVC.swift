@@ -14,12 +14,18 @@ class WFWineItemsVC: UIViewController {
         case main
     }
     
-    var wine: Wine!
+    var category: WineCategories!
     var wineItems: [Wine] = []
     var filteresWineItems: [Wine] = []
     var isSearching = false
     var collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<Section, Wine>!
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+        
+    }
+    
     
     init(wineItems: [Wine]) {
         super.init(nibName: nil, bundle: nil)
@@ -43,6 +49,7 @@ class WFWineItemsVC: UIViewController {
         configureDataSource()
         configureSearchController()
         updateData(on: wineItems)
+        
     }
     
     func configureSearchController() {
@@ -50,6 +57,7 @@ class WFWineItemsVC: UIViewController {
         searchController.searchResultsUpdater = self
         searchController.searchBar.placeholder = "Search for a wine"
         searchController.obscuresBackgroundDuringPresentation = false
+        
         navigationItem.searchController = searchController
     }
     

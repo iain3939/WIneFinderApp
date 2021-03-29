@@ -9,8 +9,6 @@ import UIKit
 
 
 struct Wine: Codable, Hashable {
-    
-    
     var wineName: String
     var wineDescription: String
     var wineCountry: String
@@ -23,15 +21,6 @@ struct Wine: Codable, Hashable {
     var typeOfClosure: String
     var tasteCategory: String
     var isRanged: Bool
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }
 
 

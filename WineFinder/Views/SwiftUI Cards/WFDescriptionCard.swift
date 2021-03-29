@@ -21,7 +21,6 @@ struct WFDescriptionCard: View {
                 .font(.title2)
                 .fontWeight(.medium)
                 .foregroundColor(.gray)
-                
                 .padding(.leading, 10)
                 .padding(.top, 10)
             

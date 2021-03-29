@@ -9,9 +9,10 @@ import UIKit
 
 class ChecklistCell: UITableViewCell {
 
-    static let  resuseID = "ChecklistCell"
-    let checklistImageView     = WFWineItemsImageView(frame: .zero)
-    let checklistLabel          = WFWineItemsLabel(textAlignment: .left, fontSize: 11)
+    static let  resuseID         = "ChecklistCell"
+    let checklistImageView       = WFWineItemsImageView(frame: .zero)
+    let checklistLabel           = WFWineItemsLabel(textAlignment: .left, fontSize: 11)
+    
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -46,6 +47,7 @@ class ChecklistCell: UITableViewCell {
     func configureCell(favorites: Wine) {
         checklistLabel.text = favorites.wineName
         checklistImageView.image = UIImage(named: favorites.wineImg)
+        
         
     }
     
